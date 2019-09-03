@@ -34,7 +34,7 @@
           <div id="menu1" class="container tab-pane fade"><br>
             <!-- b1 -->
             <div class="pb-4">
-              <div class="row">
+              <div class="row flex-column-reverse flex-lg-row">
                 <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                   <div class="input-group">
                     <input type="text" class="form-control" placeholder="Item Search">
