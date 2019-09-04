@@ -1,0 +1,3 @@
+<?php
+// inventory section
+?>
