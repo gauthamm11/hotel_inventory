@@ -1,3 +1,51 @@
+<script type="text/javascript">
+	
+$(document).on("click", ".modelid", function ()
+	{
+     $id = $(this).data('id')
+        $("#txtHidden").text($id);
+
+        $.ajax({
+                type: "GET",
+                data: {"id":$id},
+                url: "list_detail.php",
+                success: function (result)
+                 {                 
+                $("#currentdata").html(result);
+                $("#datamodel").modal('toggle');
+              }
+            });
+      
+});
+</script>
+ <!-- The Modal -->
+  <div class="modal fade" id="datamodel">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Stock Details</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <!-- 	<p id="txtHidden"></p> -->
+         <div id ="currentdata">
+         	
+         </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
 <?php
 require "dbase.php";
 //include "includes/header.php";
@@ -30,7 +78,7 @@ if (mysqli_num_rows($result) > 0) {
                     	echo '<p class="card-text"> In Stock :'.$row['current_status'].' '.$row['metric'].'</p>';
                     	}
                     	
-                  echo '<a href="#" class="btn btn-info btn-block">View Details</a>
+                  echo '<a  href="#" data-id="'.$row['id'].' " class="modelid btn btn-info btn-block">View Details</a>
                   </div>
                 </div>
                 <!-- ./item card -->
