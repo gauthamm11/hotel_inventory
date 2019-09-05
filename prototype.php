@@ -40,7 +40,7 @@
                     <input type="text" class="form-control" placeholder="Item Search">
                     <div class="input-group-append">
                       <span class="input-group-text">
-                        <img src="https://image.flaticon.com/icons/svg/321/321830.svg" width="20" height="auto" class="img-fluid">
+                        <img src="https://image.flaticon.com/icons/svg/321/321830.svg" width="20" height="20" class="img-fluid" alt="search">
                       </span>
                     </div>
                   </div>
