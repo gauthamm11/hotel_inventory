@@ -101,10 +101,6 @@
                 </div>
                 <!-- ./item card -->
               </div>
-            </div>
-            <!-- ./inventory -->
-              <!-- inventory -->
-            <div class="row">
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
                 <!-- item card -->
                 <div class="card" style="">
@@ -153,10 +149,6 @@
                 </div>
                 <!-- ./item card -->
               </div>
-            </div>
-            <!-- ./inventory -->
-              <!-- inventory -->
-            <div class="row">
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
                 <!-- item card -->
                 <div class="card" style="">
