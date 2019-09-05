@@ -9,7 +9,7 @@ echo "hello world";
 // if($conn){
 // 	echo "connected successfully!";
 // }else{
-// 	echo "connection fucked!";
+// 	echo "connection not successful!";
 // }
 
 ?>
