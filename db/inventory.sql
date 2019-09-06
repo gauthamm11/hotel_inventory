@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 04, 2019 at 05:39 PM
+-- Generation Time: Sep 06, 2019 at 04:11 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -50,14 +50,14 @@ INSERT INTO `item_history` (`sno`, `id`, `date`, `quantity`, `type`) VALUES
 (4, '1', '2019-08-02 22:30:00', 10, 1),
 (5, '2', '2019-07-31 20:30:00', 10, 1),
 (6, '2', '2019-07-31 21:30:00', 10, 0),
-(7, '2', '2019-08-01 22:30:00', 5, 1),
-(8, '2', '2019-08-01 22:30:00', 15, 1),
-(9, '2', '2019-08-02 20:30:00', 10, 1),
+(7, '2', '2019-08-01 22:30:00', 15, 1),
+(8, '2', '2019-08-01 22:30:00', 10, 0),
+(9, '2', '2019-08-02 20:30:00', 3, 0),
 (10, '3', '2019-07-31 20:30:00', 10, 1),
 (11, '3', '2019-07-31 21:30:00', 10, 0),
 (12, '3', '2019-08-01 22:30:00', 10, 1),
-(13, '3', '2019-08-01 22:30:00', 15, 1),
-(14, '3', '2019-08-02 20:30:00', 5, 1),
+(13, '3', '2019-08-01 22:30:00', 10, 1),
+(14, '3', '2019-08-02 20:30:00', 15, 0),
 (15, '4', '2019-07-31 20:30:00', 10, 1),
 (16, '4', '2019-07-31 21:30:00', 10, 0),
 (17, '4', '2019-08-01 22:30:00', 5, 1),
@@ -65,8 +65,8 @@ INSERT INTO `item_history` (`sno`, `id`, `date`, `quantity`, `type`) VALUES
 (19, '4', '2019-08-02 20:30:00', 10, 1),
 (20, '5', '2019-07-31 20:30:00', 10, 1),
 (21, '5', '2019-07-31 21:30:00', 10, 0),
-(22, '5', '2019-08-01 22:30:00', 10, 1),
-(23, '5', '2019-08-01 22:30:00', 10, 1),
+(22, '5', '2019-08-01 22:30:00', 30, 1),
+(23, '5', '2019-08-01 22:30:00', 15, 0),
 (24, '5', '2019-08-02 20:30:00', 10, 1),
 (25, '6', '2019-07-31 20:30:00', 10, 1),
 (26, '6', '2019-07-31 21:30:00', 10, 0),
@@ -118,16 +118,16 @@ CREATE TABLE IF NOT EXISTS `item_list` (
 --
 
 INSERT INTO `item_list` (`sno`, `id`, `name`, `metric`, `current_status`, `threshold`, `pic`) VALUES
-(1, '1', 'Maida', 'kg', 20, 5, '\\images\\inv1\\Maida.jpg'),
-(11, '10', 'Pepper', 'kg', 15, 3, '\\images\\inv1\\Pepper.jpg'),
-(2, '2', 'Wheat', 'kg', 25, 4, '\\images\\inv1\\Wheat.jpg'),
-(3, '3', 'Oil', 'ltr', 30, 6, '\\images\\inv1\\oil.jpg'),
-(4, '4', 'Moong dal', 'kg', 30, 6, '\\images\\inv1\\Moongdal.jpg'),
-(5, '5', 'Toor dal', 'kg', 40, 10, '\\images\\inv1\\Toordal.jpg'),
-(6, '6', 'Urad dal', 'kg', 10, 2, '\\images\\inv1\\Uraddal.jpg'),
-(8, '7', 'Channa dal', 'kg', 20, 5, '\\images\\inv1\\Channa.jpg'),
-(9, '8', 'Chilli Powder', 'kg', 15, 3, '\\images\\inv1\\Chilli.jpg'),
-(10, '9', 'Dalda', 'kg', 10, 3, '\\images\\inv1\\Dalda.jpg');
+(1, '1', 'Maida', 'kg', 20, 5, 'images\\inv1\\Maida.jpg'),
+(11, '10', 'Pepper', 'kg', 15, 3, 'images\\inv1\\Pepper.jpg'),
+(2, '2', 'Wheat', 'kg', 2, 4, 'images\\inv1\\Wheat.jpg'),
+(3, '3', 'Oil', 'ltr', 5, 6, 'images\\inv1\\oil.jpg'),
+(4, '4', 'Moong dal', 'kg', 30, 6, 'images\\inv1\\Moongdal.jpg'),
+(5, '5', 'Toor dal', 'kg', 5, 10, 'images\\inv1\\Toordal.jpg'),
+(6, '6', 'Urad dal', 'kg', 10, 2, 'images\\inv1\\Uraddal.jpg'),
+(8, '7', 'Channa dal', 'kg', 20, 5, 'images\\inv1\\Channa.jpg'),
+(9, '8', 'Chilli Powder', 'kg', 15, 3, 'images\\inv1\\Chilli.jpg'),
+(10, '9', 'Dalda', 'kg', 10, 3, 'images\\inv1\\Dalda.jpg');
 
 --
 -- Constraints for dumped tables

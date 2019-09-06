@@ -73,7 +73,7 @@ if (mysqli_num_rows($result) > 0) {
                       echo '<p class="card-text"> In Stock :'.$row['current_status'].' '.$row['metric'].'</p>';
                       }
                       
-                  echo '<a  href="#" data-id="'.$row['id'].' " class="modelid btn btn-info btn-block">View Details</a>
+                  echo '<a  href="#!" data-id="'.$row['id'].' " class="modelid btn btn-info btn-block">View Details</a>
                   </div>
                 </div>
                 <!-- ./item card -->
