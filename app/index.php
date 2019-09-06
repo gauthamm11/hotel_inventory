@@ -11,7 +11,7 @@
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
-    <body class="bg-light">
+    <body>
 
     	<div class="container">
     		<h2>Inventory Management</h2>
@@ -19,7 +19,7 @@
     		<!-- Nav tabs -->
     		<ul class="nav nav-tabs nav-justified" role="tablist">
     			<li class="nav-item">
-    				<a class="nav-link active" data-toggle="tab" href="#dashboard`">Dashboard</a>
+    				<a class="nav-link active" data-toggle="tab" href="#dashboard">Dashboard</a>
     			</li>
     			<li class="nav-item">
     				<a class="nav-link" data-toggle="tab" href="#inventory">Inventory</a>
@@ -27,16 +27,20 @@
     		</ul>
 
     		<!-- Tab panes -->
-    		<div class="tab-content">
+    		<div class="tab-content bg-light">
     			<div id="dashboard" class="container tab-pane active"><br>
+                    <div class="min-vh-100">
     				<?php
     				include "dashboard.php";
     				?>
+                    </div>
     			</div>
     			<div id="inventory" class="container tab-pane fade"><br>
+                    <div class="min-vh-100">
     				<?php
     				include "inventory.php";
     				?>
+                    </div>
     			</div>
     		</div>
     	</div>

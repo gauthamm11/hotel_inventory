@@ -1,7 +1,6 @@
-<script type="text/javascript">
-	
-$(document).on("click", ".modelid", function ()
-	{
+<script>
+$(document).ready(function(){
+  $(".modelid").click(function(){
      $id = $(this).data('id')
         $("#txtHidden").text($id);
 
@@ -17,9 +16,10 @@ $(document).on("click", ".modelid", function ()
             });
       
 });
+});
 </script>
- <!-- The Modal -->
-  <div class="modal fade" id="datamodel">
+ <!-- modal -->
+  <div class="modal fade" data-backdrop="static" id="datamodel">
     <div class="modal-dialog">
       <div class="modal-content">
       
@@ -39,17 +39,17 @@ $(document).on("click", ".modelid", function ()
         
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger">Delete</button>
         </div>
         
       </div>
     </div>
   </div>
+ <!-- ./modal -->
 
 <?php
 require "dbase.php";
 //include "includes/header.php";
-
 $sql = "SELECT * FROM item_list";
 $result = mysqli_query($conn, $sql);
 
