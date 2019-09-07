@@ -14,15 +14,15 @@
     <body>
 
     	<div class="container">
-    		<h2>Inventory Management</h2>
     		<br>
+            <h2 class="bg-light text-center">Inventory Management</h2><br>
     		<!-- Nav tabs -->
     		<ul class="nav nav-tabs nav-justified" role="tablist">
     			<li class="nav-item">
-    				<a class="nav-link active" data-toggle="tab" href="#dashboard">Dashboard</a>
+    				<a class="nav-link active" data-toggle="tab" href="#dashboard"><strong>Dashboard</strong></a>
     			</li>
     			<li class="nav-item">
-    				<a class="nav-link" data-toggle="tab" href="#inventory">Inventory</a>
+    				<a class="nav-link" data-toggle="tab" href="#inventory"><strong>Inventory</strong></a>
     			</li>
     		</ul>
 
