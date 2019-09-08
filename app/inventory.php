@@ -94,9 +94,9 @@ $filter = $text.toLowerCase();
         <!--  <p id="txtHidden"></p> -->
         <form action="add_new.php" method="post" enctype="multipart/form-data">
  
-        Name : <input type="text" name="itemname" class="form-control"><br>
-        Stock : <input type="text" name="quantity" onkeypress="return ValidateDecimalOnly(event)" class="form-control"><br>
-         Threshold : <input type="text" name="treshold" onkeypress="return ValidateDecimalOnly(event)" class="form-control"><br>
+        Name : <input type="text" autocomplete="off"name="itemname" class="form-control"><br>
+        Stock : <input type="text" autocomplete="off"name="quantity" onkeypress="return ValidateDecimalOnly(event)" class="form-control"><br>
+         Threshold : <input type="text" autocomplete="off" name="treshold" onkeypress="return ValidateDecimalOnly(event)" class="form-control"><br>
         Metric :<select name="metric" class="form-control">
           <option >---select Metric---</option>
           <option value="kg">Kilogram</option>
@@ -108,9 +108,9 @@ $filter = $text.toLowerCase();
         </div>
         
         <!-- Modal footer -->
-        <div class="modal-footer">
+        <!-- <div class="modal-footer">
           <button type="button" data-dismiss="modal" class="btn btn-info">Close</button>
-        </div>
+        </div> -->
         
       </div>
     </div>
