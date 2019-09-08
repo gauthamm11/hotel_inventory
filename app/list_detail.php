@@ -7,8 +7,8 @@ if (isset($_GET['id'])){
 
 $q = $_GET['id'];
 
-$sql = "SELECT b.id,b.date,b.quantity,b.type FROM item_list as a inner join
- item_history as b on a.id =b.id where a.id = '$q'
+  $sql = "SELECT b.id,b.date,b.quantity,b.type FROM item_list as a inner join item_history as b
+ a.id =b.id where a.id = '$q'
  ORDER BY b.date ASC" ;
 
 
