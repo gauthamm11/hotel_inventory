@@ -11,19 +11,17 @@ $q = $_GET['id'];
 // echo $q;
 
 $sql = "SELECT a.name,b.id,b.date,b.quantity,b.type FROM item_list as a inner join item_history as b on a.id =b.id where a.id = '$q' ORDER BY b.date ASC" ;
-
-
+$first = "SELECT * from item_list where id = '$q'";
+ $firstresult = mysqli_query($conn,$first);
 $result = mysqli_query($conn,$sql);
 
 if(mysqli_num_rows($result) > 0){
-$headname="";
-    // $rows = mysqli_fetch_assoc($result);
-//$headname=$rows['name'];
-     
-    echo "<h4>".$headname."</h4>";
+$metric="";
+     $rows = mysqli_fetch_assoc($firstresult);
+
     echo "<table class='table table-hover'>
 <tr>
-<th class='text-center'>Quantity</th>
+<th class='text-center'>Quantity (".$rows['metric'].")</th>
 <th class='text-center'>Type</th>
 <th class='text-center'>Date</th>
 

@@ -132,7 +132,7 @@ $('#addform').on('submit', function (e) {
 
                   <!-- Modal Header -->
                   <div class="modal-header">
-                    <h4 class="modal-title"> <span id="txtname"> </span> Stock History</h4>
+                    <h4 class="modal-title"> <span id="txtname"> </span> - Stock History</h4>
                     <button type="button" class="close" data-dismiss="modal">×</button>
                   </div>
 
