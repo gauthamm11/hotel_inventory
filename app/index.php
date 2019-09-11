@@ -14,7 +14,7 @@
     </head>
     <body>
 
-    	<div class="container">
+    	<div class="container mb-5">
     		<br>
             <h2 class="bg-light text-center">Inventory Management</h2><br>
     		<!-- Nav tabs -->

@@ -112,7 +112,7 @@ $('#addform').on('submit', function (e) {
               <div class="row flex-column-reverse flex-lg-row">
                 <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                   <div class="input-group">
-                    <input type="text" id ="textsearch"class="form-control" onkeyup="searchmenu()" placeholder="Item Search">
+                    <input type="text" id ="textsearch"class="form-control" onkeyup="searchmenu()" placeholder="Product Search">
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <img src="https://image.flaticon.com/icons/svg/321/321830.svg" width="20" height="20" class="img-fluid" alt="search">
@@ -121,7 +121,7 @@ $('#addform').on('submit', function (e) {
                   </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
-                  <button type="button" id="btnaddnew" data-toggle="modal" data-target="#addnew"class="btn btn-success btn-block">Add New <i class="fa fa-plus-square" aria-hidden="true"></i></button>
+                  <button type="button" id="btnaddnew" data-toggle="modal" data-target="#addnew"class="btn btn-success btn-block">Add Product <i class="fa fa-plus-square" aria-hidden="true"></i></button>
                 </div>
               </div>
             </div>
@@ -160,7 +160,7 @@ $('#addform').on('submit', function (e) {
                  <form id="addform" enctype="multipart/form-data">
                   <!-- Modal Header -->
                   <div class="modal-header">
-                    <h4 class="modal-title">Stock Details</h4>
+                    <h4 class="modal-title">Stock Details <i class="fa fa-shopping-cart" aria-hidden="true"></i></h4>
                     <button type="button" class="close" data-dismiss="modal">×</button>
                   </div>
 
@@ -171,7 +171,7 @@ $('#addform').on('submit', function (e) {
 
                     Name : <input type="text" autocomplete="off" name="itemname" required id="itemname" class="form-control"><br>
                     Stock : <input type="text" autocomplete="off" name="quantity" required id="quantity" onkeypress="return ValidateDecimalOnly(event)" class="form-control"><br>
-                    Threshold : <input type="text" autocomplete="off" name="treshold" required id="treshold" onkeypress="return ValidateDecimalOnly(event)" class="form-control"><br>
+                    Minimum Value : <input type="text" autocomplete="off" name="treshold" required id="treshold" onkeypress="return ValidateDecimalOnly(event)" class="form-control"><br>
                     Metric :<select id="metric" name="metric" class="form-control" required>
                       <option value="" disabled selected>---select Metric---</option>
                       <option value="kg">Kilogram</option>
@@ -182,7 +182,7 @@ $('#addform').on('submit', function (e) {
 
                   <!-- Modal footer -->
                   <div class="modal-footer">
-                    <button type="submit" class="btn btn-info pull-right">Add</button>
+                    <button type="submit" class="btn btn-info pull-right">Add <i class="fa fa-plus-square" aria-hidden="true"></i></button>
                   </div>
                 </form>
               </div>
