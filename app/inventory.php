@@ -121,7 +121,7 @@ $('#addform').on('submit', function (e) {
                   </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
-                  <button type="button" id="btnaddnew" data-toggle="modal" data-target="#addnew"class="btn btn-success btn-block">Add New</button>
+                  <button type="button" id="btnaddnew" data-toggle="modal" data-target="#addnew"class="btn btn-success btn-block">Add New <i class="fa fa-plus-square" aria-hidden="true"></i></button>
                 </div>
               </div>
             </div>
@@ -132,7 +132,7 @@ $('#addform').on('submit', function (e) {
 
                   <!-- Modal Header -->
                   <div class="modal-header">
-                    <h4 class="modal-title"> <span id="txtname"> </span> - Stock History</h4>
+                    <h4 class="modal-title"> <span id="txtname"> </span> - Stock History <i class="fa fa-calendar" aria-hidden="true"></i></h4>
                     <button type="button" class="close" data-dismiss="modal">×</button>
                   </div>
 
@@ -146,7 +146,7 @@ $('#addform').on('submit', function (e) {
 
                   <!-- Modal footer -->
                   <div class="modal-footer">
-                    <button type="button" onclick="deletefun()" class="btn btn-danger">Delete</button>
+                    <button type="button" onclick="deletefun()" class="btn btn-danger">Delete <i class="fa fa-trash" aria-hidden="true"></i></button>
                   </div>
 
                 </div>
@@ -169,15 +169,15 @@ $('#addform').on('submit', function (e) {
                     <!--  <p id="txtHidden"></p> -->
 
 
-                    Name : <input type="text" autocomplete="off" name="itemname" id="itemname" class="form-control"><br>
-                    Stock : <input type="text" autocomplete="off" name="quantity" id="quantity" onkeypress="return ValidateDecimalOnly(event)" class="form-control"><br>
-                    Threshold : <input type="text" autocomplete="off" name="treshold" id="treshold" onkeypress="return ValidateDecimalOnly(event)" class="form-control"><br>
-                    Metric :<select id="metric" name="metric" class="form-control">
-                      <option >---select Metric---</option>
+                    Name : <input type="text" autocomplete="off" name="itemname" required id="itemname" class="form-control"><br>
+                    Stock : <input type="text" autocomplete="off" name="quantity" required id="quantity" onkeypress="return ValidateDecimalOnly(event)" class="form-control"><br>
+                    Threshold : <input type="text" autocomplete="off" name="treshold" required id="treshold" onkeypress="return ValidateDecimalOnly(event)" class="form-control"><br>
+                    Metric :<select id="metric" name="metric" class="form-control" required>
+                      <option value="" disabled selected>---select Metric---</option>
                       <option value="kg">Kilogram</option>
                       <option value="ltr">Litre</option>
                     </select><br>
-                    Picture : <input type="file" name="pic" id="pic" accept="image/x-png, image/gif, image/jpeg, image/jpg"><br>
+                    Picture : <input type="file" name="pic" id="pic" required accept="image/x-png, image/gif, image/jpeg, image/jpg"><br>
                   </div>
 
                   <!-- Modal footer -->
@@ -217,7 +217,7 @@ $('#addform').on('submit', function (e) {
               echo '<p class="card-text"> In Stock :'.$row['current_status'].' '.$row['metric'].'</p>';
             }
 
-            echo '<button data-id="'.$row['id'].' " data-name="'.$row['name'].' " class="modelid btn btn-info btn-block">View Details</button>
+            echo '<button data-id="'.$row['id'].' " data-name="'.$row['name'].' " class="modelid btn btn-info btn-block">View Details <i class="fa fa-eye" aria-hidden="true"></i></button>
             </div>
             </div>
             <!-- ./item card -->

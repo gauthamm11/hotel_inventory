@@ -10,6 +10,7 @@
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 
@@ -19,10 +20,10 @@
     		<!-- Nav tabs -->
     		<ul class="nav nav-tabs nav-justified" role="tablist">
     			<li class="nav-item">
-    				<a class="nav-link active" data-toggle="tab" href="#dashboard"><strong>Dashboard</strong></a>
+    				<a class="nav-link active" data-toggle="tab" href="#dashboard"><strong>Dashboard</strong> <i class="fa fa-snowflake-o" aria-hidden="true"></i></a>
     			</li>
     			<li class="nav-item">
-    				<a class="nav-link" data-toggle="tab" href="#inventory"><strong>Inventory</strong></a>
+    				<a class="nav-link" data-toggle="tab" href="#inventory"><strong>Inventory</strong> <i class="fa fa-cubes" aria-hidden="true"></i></a>
     			</li>
     		</ul>
 
