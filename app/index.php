@@ -11,6 +11,9 @@
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
+
     </head>
     <body>
 
@@ -34,6 +37,7 @@
     				<?php
     				include "dashboard.php";
     				?>
+                  <div class="container" id="columnchart_material" style="width: 800px; height: 500px;"></div>
                     </div>
     			</div>
     			<div id="inventory" class="container tab-pane fade"><br>
