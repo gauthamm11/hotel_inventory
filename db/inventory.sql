@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 13, 2019 at 01:40 PM
+-- Generation Time: Sep 13, 2019 at 01:56 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -50,7 +50,7 @@ INSERT INTO `item_history` (`sno`, `id`, `date`, `quantity`, `type`, `vendor_nam
 (1, '1', '2019-07-31 19:30:00', 2, 1, 'Shrinica Departmental Stores', '044 4386 1177', 'Mugalivakkam, Chennai.'),
 (2, '1', '2019-07-31 20:30:00', 2, 0, NULL, NULL, NULL),
 (3, '1', '2019-08-01 21:30:00', 10, 1, 'Maharaja Store', '95515 53266', 'Porur, Chennai.'),
-(4, '1', '2019-08-02 22:30:00', 10, 1, 'Sri Murugan Departmental Stores', '044 2362 1312', 'vadapalani,, Chennai.'),
+(4, '1', '2019-08-02 22:30:00', 10, 1, 'Sri Murugan Departmental Stores', '044 2362 1312', 'vadapalani, Chennai.'),
 (5, '2', '2019-07-31 20:30:00', 10, 1, 'Yaswin Departmental Stores', '93810 83883', 'Chromepet, Chennai.'),
 (6, '2', '2019-07-31 21:30:00', 10, 0, NULL, NULL, NULL),
 (7, '2', '2019-08-01 22:30:00', 15, 1, 'Adyar Departmental Stores', '044 2445 7784', 'Adyar, Chennai.'),
@@ -79,7 +79,7 @@ INSERT INTO `item_history` (`sno`, `id`, `date`, `quantity`, `type`, `vendor_nam
 (30, '7', '2019-07-31 20:30:00', 10, 1, 'Yaswin Departmental Stores', '93810 83883', 'Chromepet, Chennai.'),
 (31, '7', '2019-07-31 21:30:00', 10, 0, NULL, NULL, NULL),
 (32, '7', '2019-08-01 22:30:00', 10, 1, 'Mohan department stores', '044 2464 2921', 'Mylapore, Chennai.'),
-(33, '7', '2019-08-01 22:30:00', 5, 1, 'Sri Murugan Departmental Stores', '044 2362 1312', 'vadapalani,, Chennai.'),
+(33, '7', '2019-08-01 22:30:00', 5, 1, 'Sri Murugan Departmental Stores', '044 2362 1312', 'vadapalani, Chennai.'),
 (34, '7', '2019-08-02 20:30:00', 5, 1, 'Kumaran Departmental Stores', '98415 54155', 'Kodambakkam, Chennai.'),
 (35, '8', '2019-07-31 20:30:00', 10, 1, 'Adyar Departmental Stores', '044 2445 7784', 'Adyar, Chennai.'),
 (36, '8', '2019-07-31 21:30:00', 10, 0, NULL, NULL, NULL),
@@ -95,7 +95,7 @@ INSERT INTO `item_history` (`sno`, `id`, `date`, `quantity`, `type`, `vendor_nam
 (46, '10', '2019-07-31 21:30:00', 10, 0, NULL, NULL, NULL),
 (47, '10', '2019-08-01 22:30:00', 5, 1, 'Adyar Departmental Stores', '044 2445 7784', 'Adyar, Chennai.'),
 (48, '10', '2019-08-01 22:30:00', 5, 0, NULL, NULL, NULL),
-(49, '10', '2019-08-02 20:30:00', 15, 1, 'Sri Murugan Departmental Stores', '044 2362 1312', 'vadapalani,, Chennai.');
+(49, '10', '2019-08-02 20:30:00', 15, 1, 'Sri Murugan Departmental Stores', '044 2362 1312', 'vadapalani, Chennai.');
 
 -- --------------------------------------------------------
 
