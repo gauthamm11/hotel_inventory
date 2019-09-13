@@ -217,7 +217,11 @@ $('#addform').on('submit', function (e) {
               echo '<p class="card-text"> In Stock :'.$row['current_status'].' '.$row['metric'].'</p>';
             }
 
-            echo '<button data-id="'.$row['id'].' " data-name="'.$row['name'].' " class="modelid btn btn-info btn-block">View Details <i class="fa fa-eye" aria-hidden="true"></i></button>
+            echo '
+            <div class="btn-group btn-block">
+            <button data-id="'.$row['id'].' " data-name="'.$row['name'].' " class="modelid btn btn-success">View <i class="fa fa-eye" aria-hidden="true"></i></button>
+            <button data-id="'.$row['id'].' " data-name="'.$row['name'].' " class="btn btn-warning">Entry <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+            </div>
             </div>
             </div>
             <!-- ./item card -->

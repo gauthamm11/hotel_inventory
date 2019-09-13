@@ -10,7 +10,7 @@ $q = $_GET['id'];
 
 // echo $q;
 
-$sql = "SELECT a.name,b.id,b.date,b.quantity,b.type FROM item_list as a inner join item_history as b on a.id =b.id where a.id = '$q' ORDER BY b.date ASC" ;
+$sql = "SELECT a.name,b.id,b.date,b.quantity,b.type,b.vendor_name,b.vendor_mob,b.vendor_adr FROM item_list as a inner join item_history as b on a.id =b.id where a.id = '$q' ORDER BY b.date ASC" ;
 $first = "SELECT * from item_list where id = '$q'";
  $firstresult = mysqli_query($conn,$first);
 $result = mysqli_query($conn,$sql);
@@ -25,6 +25,8 @@ $metric="";
 <th class='text-center'>Type</th>
 <th class='text-center'>Date</th>
 
+<th class='text-center'>Vendor Details</th>
+<th class='text-center'>Vendor Address</th>
 </tr>";
 
  while($row = mysqli_fetch_assoc($result)) {
@@ -40,7 +42,9 @@ else
     echo "In Stock";
     else
    echo "Used";
-    echo "</td><td class='text-center'>" . $row['date'] . "</td>";   
+    echo "</td><td class='text-center'>" . $row['date'] . "</td>";
+    echo "<td class='text-center'>" . $row['vendor_name'] . "<br>".$row['vendor_mob']."</td>";
+    echo "<td class='text-center'>" . $row['vendor_adr'] . "</td>";
     echo "</tr>";
 //}
 //}

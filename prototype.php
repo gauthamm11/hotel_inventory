@@ -8,7 +8,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-       
+
     </head>
     <body>
       <br>
@@ -57,11 +57,14 @@
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
                 <!-- item card -->
                 <div class="card" style="">
-                  <img class="card-img-top" src="https://via.placeholder.com/250x250?text=Rice" alt="">
+                  <img class="card-img-top" width="100" height="100" src="https://via.placeholder.com/100x100?text=Rice" alt="">
                   <div class="card-body text-center p-0">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
-                    <a href="#" class="btn btn-info btn-block">View Details</a>
+                    <div class="btn-group btn-block">
+                      <button type="button" class="btn btn-info">View</button>
+                      <button type="button" class="btn btn-warning">Entry</button>
+                    </div>
                   </div>
                 </div>
                 <!-- ./item card -->
@@ -69,11 +72,11 @@
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
                 <!-- item card -->
                 <div class="card" style="">
-                  <img class="card-img-top" src="https://via.placeholder.com/250x250?text=Sugar" alt="">
+                  <img class="card-img-top" width="100" height="100" src="https://via.placeholder.com/100x100?text=Sugar" alt="">
                   <div class="card-body text-center p-0">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
-                    <a href="#" class="btn btn-info btn-block">View Details</a>
+                    <button type="button" class="btn btn-info">View Details</button>
                   </div>
                 </div>
                 <!-- ./item card -->
@@ -81,11 +84,11 @@
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
                 <!-- item card -->
                 <div class="card" style="">
-                  <img class="card-img-top" src="https://via.placeholder.com/250x250?text=Pepper" alt="">
+                  <img class="card-img-top" width="100" height="100" src="https://via.placeholder.com/100x100?text=Pepper" alt="">
                   <div class="card-body text-center p-0">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
-                    <a href="#" class="btn btn-info btn-block">View Details</a>
+                    <button type="button" class="btn btn-info">View Details</button>
                   </div>
                 </div>
                 <!-- ./item card -->
@@ -93,11 +96,11 @@
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
                 <!-- item card -->
                 <div class="card" style="">
-                  <img class="card-img-top" src="https://via.placeholder.com/250x250?text=Sun+Oil" alt="">
+                  <img class="card-img-top" width="100" height="100" src="https://via.placeholder.com/100x100?text=Sun+Oil" alt="">
                   <div class="card-body text-center p-0">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
-                    <a href="#" class="btn btn-info btn-block">View Details</a>
+                    <button type="button" class="btn btn-info">View Details</button>
                   </div>
                 </div>
                 <!-- ./item card -->
@@ -105,11 +108,11 @@
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
                 <!-- item card -->
                 <div class="card" style="">
-                  <img class="card-img-top" src="https://via.placeholder.com/250x250?text=Rice" alt="">
+                  <img class="card-img-top" width="100" height="100" src="https://via.placeholder.com/100x100?text=Rice" alt="">
                   <div class="card-body text-center p-0">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
-                    <a href="#" class="btn btn-info btn-block">View Details</a>
+                    <button type="button" class="btn btn-info">View Details</button>
                   </div>
                 </div>
                 <!-- ./item card -->
@@ -117,11 +120,11 @@
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
                 <!-- item card -->
                 <div class="card" style="">
-                  <img class="card-img-top" src="https://via.placeholder.com/250x250?text=Sugar" alt="">
+                  <img class="card-img-top" width="100" height="100" src="https://via.placeholder.com/100x100?text=Sugar" alt="">
                   <div class="card-body text-center p-0">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
-                    <a href="#" class="btn btn-info btn-block">View Details</a>
+                    <button type="button" class="btn btn-info">View Details</button>
                   </div>
                 </div>
                 <!-- ./item card -->
@@ -129,11 +132,11 @@
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
                 <!-- item card -->
                 <div class="card" style="">
-                  <img class="card-img-top" src="https://via.placeholder.com/250x250?text=Pepper" alt="">
+                  <img class="card-img-top" width="100" height="100" src="https://via.placeholder.com/100x100?text=Pepper" alt="">
                   <div class="card-body text-center p-0">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
-                    <a href="#" class="btn btn-info btn-block">View Details</a>
+                    <button type="button" class="btn btn-info">View Details</button>
                   </div>
                 </div>
                 <!-- ./item card -->
@@ -141,11 +144,11 @@
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
                 <!-- item card -->
                 <div class="card" style="">
-                  <img class="card-img-top" src="https://via.placeholder.com/250x250?text=Sun+Oil" alt="">
+                  <img class="card-img-top" width="100" height="100" src="https://via.placeholder.com/100x100?text=Sun+Oil" alt="">
                   <div class="card-body text-center p-0">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
-                    <a href="#" class="btn btn-info btn-block">View Details</a>
+                    <button type="button" class="btn btn-info">View Details</button>
                   </div>
                 </div>
                 <!-- ./item card -->
@@ -153,11 +156,11 @@
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
                 <!-- item card -->
                 <div class="card" style="">
-                  <img class="card-img-top" src="https://via.placeholder.com/250x250?text=Rice" alt="">
+                  <img class="card-img-top" width="100" height="100" src="https://via.placeholder.com/100x100?text=Rice" alt="">
                   <div class="card-body text-center p-0">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
-                    <a href="#" class="btn btn-info btn-block">View Details</a>
+                    <button type="button" class="btn btn-info">View Details</button>
                   </div>
                 </div>
                 <!-- ./item card -->
@@ -165,11 +168,11 @@
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
                 <!-- item card -->
                 <div class="card" style="">
-                  <img class="card-img-top" src="https://via.placeholder.com/250x250?text=Sugar" alt="">
+                  <img class="card-img-top" width="100" height="100" src="https://via.placeholder.com/100x100?text=Sugar" alt="">
                   <div class="card-body text-center p-0">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
-                    <a href="#" class="btn btn-info btn-block">View Details</a>
+                    <button type="button" class="btn btn-info">View Details</button>
                   </div>
                 </div>
                 <!-- ./item card -->
@@ -177,11 +180,11 @@
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
                 <!-- item card -->
                 <div class="card" style="">
-                  <img class="card-img-top" src="https://via.placeholder.com/250x250?text=Pepper" alt="">
+                  <img class="card-img-top" width="100" height="100" src="https://via.placeholder.com/100x100?text=Pepper" alt="">
                   <div class="card-body text-center p-0">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
-                    <a href="#" class="btn btn-info btn-block">View Details</a>
+                    <button type="button" class="btn btn-info">View Details</button>
                   </div>
                 </div>
                 <!-- ./item card -->
@@ -189,11 +192,11 @@
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
                 <!-- item card -->
                 <div class="card" style="">
-                  <img class="card-img-top" src="https://via.placeholder.com/250x250?text=Sun+Oil" alt="">
+                  <img class="card-img-top" width="100" height="100" src="https://via.placeholder.com/100x100?text=Sun+Oil" alt="">
                   <div class="card-body text-center p-0">
                     <h4 class="card-title">John Doe</h4>
                     <p class="card-text">Some example text.</p>
-                    <a href="#" class="btn btn-info btn-block">View Details</a>
+                    <button type="button" class="btn btn-info">View Details</button>
                   </div>
                 </div>
                 <!-- ./item card -->
