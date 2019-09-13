@@ -25,6 +25,13 @@
 
    });
 
+
+ $(document).on('click', '.entrybtn', function () {
+  $("#vendordiv").css("display", "none");
+      $id = $(this).data('id')     
+     $("#entryhiddenid").val($id);                
+       $("#entrymodel").modal('toggle');    
+   });
 ///////
 
 $('#addform').on('submit', function (e) {
@@ -33,8 +40,7 @@ $('#addform').on('submit', function (e) {
                 var name = $('#itemname').val();
                 var quantity = $('#quantity').val();
                 var treshold = $('#treshold').val();
-                var metric = $('#metric').val();
-                
+                var metric = $('#metric').val();                
                 $.ajax({
                   type: "POST",
                   url: 'add_new.php',
@@ -54,7 +60,57 @@ $('#addform').on('submit', function (e) {
                 });
               });
 
+////// add entry/////
 
+$('#addentry').on('submit', function (e) {
+                e.preventDefault();    
+                $id=$('#entryhiddenid').val(); 
+                  $type=$('#entrytype').val(); 
+                   $quantity=parseFloat($('#entryquantity').val())||0;  
+                   $result=0;                     
+                $.ajax({
+                  type: "POST",
+                  url: 'add_entry.php',
+                  data:  new FormData(this),
+                  contentType: false,
+                  cache: false,
+                  processData:false,
+                  success: function (data) {
+                   $('#vendorname,#entryquantity,#vendoraddress,#vendorno,#entrytype,#entryhiddenid').val('');
+                   alert(data);
+                   $status=parseFloat($("#data"+ $id).find("#hiddenstatus").text()) || 0;
+                   $metric= $("#data"+ $id).find("#hiddenmetric").text();
+                   $threshold=parseFloat($("#data"+ $id).find("#hiddenthreshold").text()) || 0;
+                   if($type==1){
+                   $result= $status+$quantity;
+                   if($result<$threshold){
+                    $("#data"+ $id).find("#hiddenstatus").text($result);
+                    $("#data"+ $id).find("#divcurrentstatus").text('In Stock : ' +$result+ ' '+$metric); 
+                    $("#data"+ $id).find("#divcurrentstatus").addClass('card-text bg-danger');
+                  }else{
+                    $("#data"+ $id).find("#hiddenstatus").text($result);
+                    $("#data"+ $id).find("#divcurrentstatus").text('In Stock : ' +$result+ ' '+$metric); 
+                    $("#data"+ $id).find("#divcurrentstatus").removeClass('card-text bg-danger')
+                  }
+                    
+                   }else{
+                     $result= $status-$quantity;
+                    if($result<$threshold){
+                      $("#data"+ $id).find("#hiddenstatus").text($result);
+                    $("#data"+ $id).find("#divcurrentstatus").text('In Stock : ' +$result+ ' '+$metric); 
+                    $("#data"+ $id).find("#divcurrentstatus").addClass('card-text bg-danger');
+                  }else{
+                    $("#data"+ $id).find("#hiddenstatus").text($result);
+                    $("#data"+ $id).find("#divcurrentstatus").text('In Stock : ' +$result+ ' '+$metric); 
+                    $("#data"+ $id).find("#divcurrentstatus").removeClass('card-text bg-danger')
+                  }
+                   }
+                    
+                   $("#entrymodel").modal('hide');
+                    
+                  }
+                });
+              });
 //////
   });
   function searchmenu(){
@@ -72,6 +128,11 @@ $('#addform').on('submit', function (e) {
 
     return true;
   }
+  function ValidateNumberOnly(e) {
+    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        return false;
+    }
+}
   function deletefun(){
     $id =$("#txtHidden").text();
      $.ajax({
@@ -87,25 +148,13 @@ $('#addform').on('submit', function (e) {
       }
     });
   }
-// function addnew(){
-//   $itemname=$("#itemname").val();$quantity=$("#quantity").val();$treshold=$("#treshold").val();
-//   $metric=$("#metric").val(); 
-//   // $pic =new FormData();
-//   // $pic.append('file',$("#pic")[0].files[0]);
-//    $.ajax({
-//                 type: "POST",
-//                 data: {"itemname":$itemname,"quantity":$quantity,"treshold":$treshold,"metric":$metric},
-//                 url: "add_new.php",
-//                // contentType:false,
-//                 enctype:"multipart/form-data",
-//                 success: function (result)
-//                  {                 
-//                 alert(result);
-//               }
-//             });
-// }
+  function typechangefun(){
 
-
+if($("#entrytype").val()==1)
+$("#vendordiv").css("display", "block");
+else
+$("#vendordiv").css("display", "none");
+  }
 
             </script>
             <div class="pb-4">
@@ -125,7 +174,44 @@ $('#addform').on('submit', function (e) {
                 </div>
               </div>
             </div>
-            <!-- modal -->
+
+ <!-- add new modal -->
+            <div class="modal fade" data-backdrop="static" id="entrymodel">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                 <form id="addentry" enctype="multipart/form-data">
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Entry Details </h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                  <input type="text" name="id" id="entryhiddenid" style="display: none";>
+                    Qunantity : <input type="text" autocomplete="off" name="entryquantity"  id="entryquantity" class="form-control"><br>
+                    Type : <select id="entrytype" onchange="typechangefun()" name="entrytype" class="form-control" >
+                      <option value="" disabled selected>---select Type---</option>
+                      <option value="1">In</option>
+                      <option value="0">Out</option>
+                    </select><br>
+                    <div id="vendordiv" style="display: none";>
+                    Vendor Name : <input type="text" autocomplete="off" name="vendorname" id="vendorname" class=" hidden form-control"><br>
+                    Contact No: <input type="text" autocomplete="off" name="vendorno" id="vendorno" onkeypress="return ValidateNumberOnly(event)" class=" hidden form-control"><br>
+                     Address : <input type="text"  autocomplete="off" name="vendoraddress" id="vendoraddress" class="hidden form-control"><br></div>
+                 </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-info pull-right">Add <i class="fa fa-plus-square" aria-hidden="true"></i></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- ./modal -->
+
+            <!--Stock History modal -->
             <div class="modal fade" data-backdrop="static" id="datamodel">
               <div class="modal-dialog  modal-lg">
                 <div class="modal-content">
@@ -140,10 +226,8 @@ $('#addform').on('submit', function (e) {
                   <div class="modal-body">
                      <p  style="display: none"; id="txtHidden"></p>
                     <div id ="currentdata">
-
                     </div>
                   </div>
-
                   <!-- Modal footer -->
                   <div class="modal-footer">
                     <button type="button" onclick="deletefun()" class="btn btn-danger">Delete <i class="fa fa-trash" aria-hidden="true"></i></button>
@@ -153,7 +237,7 @@ $('#addform').on('submit', function (e) {
               </div>
             </div>
             <!-- ./modal -->
-            <!-- modal -->
+            <!-- add new modal -->
             <div class="modal fade" data-backdrop="static" id="addnew">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -167,8 +251,6 @@ $('#addform').on('submit', function (e) {
                   <!-- Modal body -->
                   <div class="modal-body">
                     <!--  <p id="txtHidden"></p> -->
-
-
                     Name : <input type="text" autocomplete="off" name="itemname" required id="itemname" class="form-control"><br>
                     Stock : <input type="text" autocomplete="off" name="quantity" required id="quantity" onkeypress="return ValidateDecimalOnly(event)" class="form-control"><br>
                     Minimum Value : <input type="text" autocomplete="off" name="treshold" required id="treshold" onkeypress="return ValidateDecimalOnly(event)" class="form-control"><br>
@@ -206,21 +288,22 @@ $('#addform').on('submit', function (e) {
               <div class="card" style="">
               <img class="card-img-top" width="100" height="100" src="images\inv1\\'.$row['pic'].'" alt="'.$row['name'].'">
               <div class="card-body text-center p-0">
-              <h4 class="card-title">'.$row['name'].'</h4>';
+              <h4 class="card-title">'.$row['name'].'</h4><p  style="display: none"; id ="hiddenstatus">'.$row['current_status'].'</p><p  style="display: none"; id ="hiddenmetric">'.$row['metric'].'</p><p  style="display: none"; id ="hiddenthreshold">'.$row['threshold'].'</p>';
+
               if($row['current_status']< $row['threshold'])
               {
 
-               echo '<p class="card-text bg-danger"> In Stock :'.$row['current_status'].' '.$row['metric'].'</p>';
+               echo '<p id= "divcurrentstatus" class="card-text bg-danger"> In Stock :'.$row['current_status'].' '.$row['metric'].'</p>';
              }
              else
              {
-              echo '<p class="card-text"> In Stock :'.$row['current_status'].' '.$row['metric'].'</p>';
+              echo '<p id= "divcurrentstatus" class="card-text"> In Stock :'.$row['current_status'].' '.$row['metric'].'</p>';
             }
 
             echo '
             <div class="btn-group btn-block">
             <button data-id="'.$row['id'].' " data-name="'.$row['name'].' " class="modelid btn btn-success">View <i class="fa fa-eye" aria-hidden="true"></i></button>
-            <button data-id="'.$row['id'].' " data-name="'.$row['name'].' " class="btn btn-warning">Entry <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+            <button data-id="'.$row['id'].' " data-name="'.$row['name'].' "  class="entrybtn btn btn-warning">Entry <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
             </div>
             </div>
             </div>

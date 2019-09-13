@@ -1,3 +1,4 @@
+ 
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -23,7 +24,7 @@
     		<!-- Nav tabs -->
     		<ul class="nav nav-tabs nav-justified" role="tablist">
     			<li class="nav-item">
-    				<a class="nav-link active" data-toggle="tab" href="#dashboard"><strong>Dashboard</strong> <i class="fa fa-snowflake-o" aria-hidden="true"></i></a>
+    				<a class="dashboard nav-link active" data-toggle="tab"  href="#dashboard"><strong>Dashboard</strong> <i class="fa fa-snowflake-o" aria-hidden="true"></i></a>
     			</li>
     			<li class="nav-item">
     				<a class="nav-link" data-toggle="tab" href="#inventory"><strong>Inventory</strong> <i class="fa fa-cubes" aria-hidden="true"></i></a>
@@ -52,3 +53,6 @@
 
     </body>
     </html>
+
+
+
