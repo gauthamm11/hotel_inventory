@@ -28,13 +28,13 @@ $historysql="INSERT INTO  item_history (id,quantity,type) VALUES ('$id','$quanti
     {
 
    echo '
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
+              <div id = "data'.$resultrow['id'].'" class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 pb-3">
 
               <!-- item card -->
               <div class="card" style="">
               <img class="card-img-top" width="100" height="100" src="images\inv1\\'.$resultrow['pic'].'" alt="'.$resultrow['name'].'">
               <div class="card-body text-center p-0">
-              <h4 class="card-title">'.$resultrow['name'].'</h4>';
+              <h4 class="card-title">'.$resultrow['name'].'</h4><p  style="display: none"; id ="hiddenstatus">'.$resultrow['current_status'].'</p><p  style="display: none"; id ="hiddenmetric">'.$resultrow['metric'].'</p><p  style="display: none"; id ="hiddenthreshold">'.$resultrow['threshold'].'</p>';
               if($resultrow['current_status']< $resultrow['threshold'])
               {
 
@@ -45,7 +45,10 @@ $historysql="INSERT INTO  item_history (id,quantity,type) VALUES ('$id','$quanti
               echo '<p class="card-text"> In Stock :'.$resultrow['current_status'].' '.$resultrow['metric'].'</p>';
             }
 
-            echo '<button data-id="'.$resultrow['id'].' " class="modelid btn btn-info btn-block">View Details</button>
+            echo ' <span class="btn-group btn-block">
+            <button data-id="'.$resultrow['id'].' " data-name="'.$resultrow['name'].' " class="modelid btn btn-success">View <i class="fa fa-eye" aria-hidden="true"></i></button>
+            <button data-id="'.$resultrow['id'].' " data-name="'.$resultrow['name'].' "  class="entrybtn btn btn-warning">Entry <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+            </span>
             </div>
             </div>
             <!-- ./item card -->

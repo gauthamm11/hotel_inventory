@@ -301,10 +301,10 @@ $("#vendordiv").css("display", "none");
             }
 
             echo '
-            <div class="btn-group btn-block">
+            <span class="btn-group btn-block">
             <button data-id="'.$row['id'].' " data-name="'.$row['name'].' " class="modelid btn btn-success">View <i class="fa fa-eye" aria-hidden="true"></i></button>
             <button data-id="'.$row['id'].' " data-name="'.$row['name'].' "  class="entrybtn btn btn-warning">Entry <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-            </div>
+            </span>
             </div>
             </div>
             <!-- ./item card -->
